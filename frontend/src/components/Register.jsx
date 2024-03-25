@@ -43,7 +43,7 @@ const Register = () => {
 
   const registerUser = async (userData) => {
     try {
-      const response = await fetch(`${process.env.Backendurl}/api/user/register`, {
+      const response = await fetch(` https://find-coach-1.onrender.com/api/user/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

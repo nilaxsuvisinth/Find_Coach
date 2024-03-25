@@ -9,7 +9,7 @@ function Details() {
 
     const fetchResource = useCallback(() => {
         setIsLoading(true);
-        axios.get(`${process.env.Backendurl}/api/user/${id}`)
+        axios.get(` https://find-coach-1.onrender.com/api/user/${id}`)
             .then(res => {
                 setResource(res.data.resource);
                 setIsLoading(false);

@@ -22,7 +22,7 @@ const Navbar = ({ user }) => {
 
   const handleLogout = async () => {
     try {
-      const res = await fetch(`${process.env.Backendurl}/api/user/logout`, {
+      const res = await fetch(` https://find-coach-1.onrender.com/api/user/logout`, {
         method: 'POST',
         headers: {
           Accept: 'application/json',

@@ -12,7 +12,7 @@ const Services = () => {
 
   const fetchResources = async () => {
     try {
-      const response = await fetch(`${process.env.Backendurl}/api/user/getresources`);
+      const response = await fetch(` https://find-coach-1.onrender.com/api/user/getresources`);
       if (!response.ok) {
         throw new Error('Failed to fetch resources');
       }

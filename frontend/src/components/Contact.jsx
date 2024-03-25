@@ -27,7 +27,7 @@ const Contact = () => {
             // Which is Front End but we need to
             // Submit it on Backend which is on
             // Port 3001. So we need Proxy.
-            const res = await fetch(`${process.env.Backendurl}/api/user/message`, {
+            const res = await fetch(` https://find-coach-1.onrender.com/api/user/message`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

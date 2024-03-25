@@ -9,7 +9,7 @@ const Feedback = () => {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const response = await axios.get(`${process.env.Backendurl}/api/admin/messages`);
+        const response = await axios.get(` https://find-coach-1.onrender.com/api/admin/messages`);
         if (response.status === 200) {
           setMessages(response.data.messages);
         } else {

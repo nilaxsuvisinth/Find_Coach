@@ -16,7 +16,7 @@ function Users() {
 
     const fetchUsers = () => {
         setIsLoading(true); 
-        axios.get(`${process.env.Backendurl}/api/admin/users`)
+        axios.get(` https://find-coach-1.onrender.com/api/admin/users`)
             .then(res => {
                 setUsers(res.data);
                 setIsLoading(false); 

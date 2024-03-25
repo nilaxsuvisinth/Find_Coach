@@ -20,7 +20,7 @@ const CreateResource = () => {
 useEffect(() => {
       const fetchUserProfile = async () => {
           try {
-              const response = await fetch(`${process.env.Backendurl}/api/user/users`,
+              const response = await fetch(` https://find-coach-1.onrender.com/api/user/users`,
              
                   {credentials:"include"}
               
@@ -92,7 +92,7 @@ useEffect(() => {
 
   const registerUser = async (userData) => {
     try {
-      const response = await fetch(`${process.env.Backendurl}/api/user/createResource`, {
+      const response = await fetch(` https://find-coach-1.onrender.com/api/user/createResource`, {
         method: 'POST',
         credentials:"include",
         headers: {

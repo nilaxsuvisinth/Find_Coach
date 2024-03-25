@@ -9,7 +9,7 @@ const ApproveResource = () => {
 
   const fetchResources = async () => {
     try {
-      const response = await fetch(`${process.env.Backendurl}/api/admin/getResources`);
+      const response = await fetch(` https://find-coach-1.onrender.com/api/admin/getResources`);
       if (!response.ok) {
         throw new Error('Failed to fetch resources');
       }

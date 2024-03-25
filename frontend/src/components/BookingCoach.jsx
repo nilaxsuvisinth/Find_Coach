@@ -20,7 +20,7 @@ const BookingCoach = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post(`${process.env.Backendurl}/api/booking/bookingcoach/${id}`, formData,{withCredentials:true});
+            const response = await axios.post(` https://find-coach-1.onrender.com/api/booking/bookingcoach/${id}`, formData,{withCredentials:true});
             console.log(response.data); 
             navigate('/'); 
         } catch (error) {

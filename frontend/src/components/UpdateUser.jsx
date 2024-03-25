@@ -13,7 +13,7 @@ function UpdateUser() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`${process.env.Backendurl}/api/admin/users/` + id);
+                const response = await axios.get(` https://find-coach-1.onrender.com/api/admin/users/` + id);
                 setName(response.data.name);
                 setEmail(response.data.email);
             } catch (err) {
@@ -27,7 +27,7 @@ function UpdateUser() {
 
     const handleUpdate = (e) => {
         e.preventDefault();
-        axios.put(`${process.env.Backendurl}/api/admin/users/${id}`, { name, email, password })
+        axios.put(` https://find-coach-1.onrender.com/api/admin/users/${id}`, { name, email, password })
             .then((res) => {
                 console.log(res);
                 navigate("/admin");

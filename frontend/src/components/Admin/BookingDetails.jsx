@@ -17,7 +17,7 @@ function AllBookings() {
 
   const fetchBookings = () => {
     setIsLoading(true); 
-    axios.get(`${process.env.Backendurl}/api/admin/bookingdetails`)
+    axios.get(` https://find-coach-1.onrender.com/api/admin/bookingdetails`)
       .then(res => {
         setBookings(res.data.bookings); 
         setIsLoading(false); 
