@@ -9,7 +9,7 @@ function Details() {
 
     const fetchResource = useCallback(() => {
         setIsLoading(true);
-        axios.get(`http://localhost:5000/api/user/${id}`)
+        axios.get(`${process.env.Backendurl}/api/user/${id}`)
             .then(res => {
                 setResource(res.data.resource);
                 setIsLoading(false);

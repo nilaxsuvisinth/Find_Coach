@@ -43,7 +43,7 @@ const Register = () => {
 
   const registerUser = async (userData) => {
     try {
-      const response = await fetch('http://localhost:5000/api/user/register', {
+      const response = await fetch(`${process.env.Backendurl}/api/user/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

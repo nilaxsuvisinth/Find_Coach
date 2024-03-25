@@ -16,7 +16,7 @@ function Users() {
 
     const fetchUsers = () => {
         setIsLoading(true); 
-        axios.get('http://localhost:5000/api/admin/users')
+        axios.get(`${process.env.Backendurl}/api/admin/users`)
             .then(res => {
                 setUsers(res.data);
                 setIsLoading(false); 

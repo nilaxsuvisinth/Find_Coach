@@ -27,7 +27,7 @@ const Login = ({ handleLogin }) => {
         event.preventDefault();
         const { email, password } = user;
         try {
-            const res = await fetch('https://find-coach-1.onrender.com/api/user/login', {
+            const res = await fetch(`${process.env.Backendurl}/api/user/login`, {
                 method: "POST",
                 credentials:"include",
                 headers: {

@@ -13,7 +13,7 @@ const Profile = () => {
      
      const fetchBooking = async () => {
         try {
-            const response = await fetch(`http://localhost:5000/api/booking/getBookingById/${coachId}`,
+            const response = await fetch(`${process.env.Backendurl}api/booking/getBookingById/${coachId}`,
                 { credentials: "include" }
             );
             if (!response.ok) {
@@ -35,7 +35,7 @@ const Profile = () => {
     useEffect(() => {
         const fetchUserProfile = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/user/users`,
+                const response = await fetch(`${process.env.Backendurl}api/user/users`,
                     { credentials: "include" }
                 );
                 if (!response.ok) {

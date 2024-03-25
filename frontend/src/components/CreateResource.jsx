@@ -20,7 +20,7 @@ const CreateResource = () => {
 useEffect(() => {
       const fetchUserProfile = async () => {
           try {
-              const response = await fetch(`http://localhost:5000/api/user/users`,
+              const response = await fetch(`${process.env.Backendurl}/api/user/users`,
              
                   {credentials:"include"}
               
@@ -92,7 +92,7 @@ useEffect(() => {
 
   const registerUser = async (userData) => {
     try {
-      const response = await fetch('http://localhost:5000/api/user/createResource', {
+      const response = await fetch(`${process.env.Backendurl}/api/user/createResource`, {
         method: 'POST',
         credentials:"include",
         headers: {

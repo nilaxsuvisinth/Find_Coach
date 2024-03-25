@@ -9,7 +9,7 @@ const Feedback = () => {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/admin/messages');
+        const response = await axios.get(`${process.env.Backendurl}/api/admin/messages`);
         if (response.status === 200) {
           setMessages(response.data.messages);
         } else {

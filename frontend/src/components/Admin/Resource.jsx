@@ -14,7 +14,7 @@ function Resource() {
 
   const fetchResources = () => {
     setIsLoading(true); 
-    axios.get('http://localhost:5000/api/admin/resources')
+    axios.get(`${process.env.Backendurl}/api/admin/resources`)
       .then(res => {
         setData(res.data.resources); 
         setIsLoading(false); 
@@ -44,7 +44,7 @@ function Resource() {
 
   const confirmDelete = () => {
     if (coachToDelete) {
-      axios.delete(`http://localhost:5000/api/admin/resources/${coachToDelete._id}`)
+      axios.delete(`${process.env.Backendurl}/api/admin/resources/${coachToDelete._id}`)
         .then(res => {
           console.log(res);
           setData(data.filter(coach => coach._id !== coachToDelete._id));

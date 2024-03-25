@@ -17,7 +17,7 @@ function AllBookings() {
 
   const fetchBookings = () => {
     setIsLoading(true); 
-    axios.get('http://localhost:5000/api/admin/bookingdetails')
+    axios.get(`${process.env.Backendurl}/api/admin/bookingdetails`)
       .then(res => {
         setBookings(res.data.bookings); 
         setIsLoading(false); 
