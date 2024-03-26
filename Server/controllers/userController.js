@@ -3,6 +3,8 @@ const jwt = require('jsonwebtoken');
 const Message = require("../models/msgSchema");
 const Users = require('../models/userSchema');
 const Resource = require('../models/resourceSchema');
+const dotenv = require("dotenv")
+dotenv.config()
 
 // register
 const register = async (req, res) => {
@@ -45,7 +47,7 @@ const login = async (req, res) => {
         res.cookie("jwt", token, {
             expires: new Date(Date.now() + 86400000),
             httpOnly: true,
-            secure: process.env.NODE_ENV!=="development",
+            secure: process.env.NODE_ENV !=="development",
             sameSite:'None'
         });
         res.status(200).json(user);
