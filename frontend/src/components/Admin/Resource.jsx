@@ -32,7 +32,7 @@ function Resource() {
 
   const handleVerify = (id) => {
     axios
-      .put(`http://localhost:5000/api/admin/resources/${id}/verify`, null, { withCredentials: true })
+      .put(`https://find-coach-1.onrender.com/api/admin/resources/${id}/verify`, null, { withCredentials: true })
       .then((response) => {
         console.log("Resource verified successfully:", response.data);
         fetchResources(); 

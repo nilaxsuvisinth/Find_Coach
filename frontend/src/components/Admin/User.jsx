@@ -34,7 +34,7 @@ function Users() {
 
     const confirmDelete = () => {
         if (userToDelete) {
-            axios.delete(`http://localhost:5000/api/admin/users/${userToDelete._id}`)
+            axios.delete(`https://find-coach-1.onrender.com/api/admin/users/${userToDelete._id}`)
                 .then(res => {
                     setUserToDelete(null);
                     fetchUsers(); 

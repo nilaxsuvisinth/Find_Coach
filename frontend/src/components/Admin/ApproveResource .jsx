@@ -22,7 +22,7 @@ const ApproveResource = () => {
 
   const handleApprove = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/admin/resources/approve/${id}`, {
+      const response = await fetch(`https://find-coach-1.onrender.com/api/admin/resources/approve/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
@@ -46,7 +46,7 @@ const ApproveResource = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/admin/deleteResource/${id}`, {
+      const response = await fetch(`https://find-coach-1.onrender.com/api/admin/deleteResource/${id}`, {
         method: 'DELETE'
       });
       if (!response.ok) {
