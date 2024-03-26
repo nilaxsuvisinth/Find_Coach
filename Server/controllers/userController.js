@@ -44,7 +44,9 @@ const login = async (req, res) => {
         const token = await user.generateToken();
         res.cookie("jwt", token, {
             expires: new Date(Date.now() + 86400000),
-            httpOnly: true
+            httpOnly: true,
+            secure: process.env.NODE_ENV!=="development",
+            sameSite:'None'
         });
         res.status(200).json(user);
     } catch (error) {
